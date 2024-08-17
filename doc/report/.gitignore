@@ -1,4 +1,13 @@
-## Visual Studio Code
+### General
+
+# Generated file
+*.pdf
+
+# Special files/folders
+tmp
+
+### Visual Studio Code
+
 .vscode/
 
 # Local History for Visual Studio Code
@@ -6,6 +15,8 @@
 
 # Built Visual Studio Code Extensions
 *.vsix
+
+### LaTex
 
 ## Core latex/pdflatex auxiliary files:
 *.aux
