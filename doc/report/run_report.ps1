@@ -22,17 +22,7 @@ function Build-LaTeX {
     pdflatex $ReportName
     Test-Error
 
-    # Step 2: Run biber
-    Write-Host "Running biber..."
-    biber $ReportName
-    Test-Error
-
-    # Step 3: Run pdflatex again
-    Write-Host "Running pdflatex again..."
-    pdflatex $ReportName
-    Test-Error
-
-    # Step 4: Run pdflatex again
+    # Step 2: Run pdflatex again
     Write-Host "Running pdflatex again..."
     pdflatex $ReportName
     Test-Error

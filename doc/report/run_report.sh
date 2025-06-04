@@ -24,14 +24,6 @@ function BuildLaTeX() {
     pdflatex "$REPORT"
     TestError
 
-    echo "Running biber..."
-    biber "$REPORT"
-    TestError
-
-    echo "Running pdflatex again..."
-    pdflatex "$REPORT"
-    TestError
-
     echo "Running pdflatex again..."
     pdflatex "$REPORT"
     TestError

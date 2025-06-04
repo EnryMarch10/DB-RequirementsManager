@@ -1,29 +1,19 @@
 \documentclass[12pt, a4paper]{report}
-\usepackage[margin=1in]{geometry}
-\usepackage[utf8]{inputenc}
+
 \usepackage[T1]{fontenc}
-
-\usepackage{times}
-
-\usepackage{float}
-
-\usepackage{url}
-\usepackage{graphicx}
-\usepackage[colorlinks=false, pdfborder={0 0 0}]{hyperref}
-
-\usepackage{tabularray}
-
-\usepackage{listings}
-\usepackage[table, svgnames]{xcolor}
-\usepackage[backend=biber, style=alphabetic, sorting=ynt]{biblatex}
-
-% Avoids URLs to overfull \hbox
-\usepackage{xurl}
-
+\usepackage[utf8]{inputenc}
+\usepackage{times} % Selected font
+\usepackage[table, svgnames]{xcolor} % Colors
+\usepackage{url} % To put URLs
+\usepackage{xurl} % Avoids URLs to overfull \hbox
+\usepackage{float} % For anchor options
+\usepackage[margin=1in]{geometry} % Page geom
+\usepackage{graphicx} % Images
+\usepackage{tabularray} % For tables
+\usepackage{listings} % To use listings
 \usepackage{pdfpages}
 
-% For overlaying text
-\usepackage{tikz}
+\usepackage{tikz} % For graphs and overlaying text
 
 % Normal table
 \colorlet{dark_title_rows}{gray!90}
@@ -103,7 +93,8 @@
 
 % Package to keep track of the total number of pages
 \usepackage{lastpage}
-\usepackage{fancyhdr}
+\usepackage{fancyhdr} % To define custom page numbering
+\setlength{\headheight}{14.49998pt} % Avoids fancyhdr Warning, due to 12pt titles
 
 \fancypagestyle{fancy}{
   \fancyhf{}
@@ -118,6 +109,10 @@
   \renewcommand{\headrulewidth}{0pt}
   \renewcommand{\footrulewidth}{0.4pt}
 }
+
+\usepackage[colorlinks=true, linkcolor=blue, citecolor=blue, urlcolor=blue, pdfborder={0 0 0}, hyperfootnotes=true, hypertexnames=false]{hyperref}
+% You must include hyperref before hypcap
+\usepackage[table, figure]{hypcap} % Ensures that references go to the figure or the table and not the caption
 
 \pagestyle{fancy}
 
@@ -1154,9 +1149,5 @@ The third one displays the operations tab, \nameref{fig:app_op14}.
 \includegraphics[width=\textwidth]{app-op14}
 \label{fig:app_op14}
 \end{figure}
-
-% \appendix
-
-% \printbibliography
 
 \end{document}
